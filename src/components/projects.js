@@ -13,7 +13,30 @@ class Projects extends Component {
     if(this.state.activeTab === 0){
       return(
         <div className="projects-grid">
-          {/* Project 1 */}
+
+       {/* Project 1 */}
+        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >My First Project</CardTitle>
+            <CardText>
+              HTML/CSS/Bootstrap
+            </CardText>
+            <CardActions border>
+            <a href="https://github.com/zahershahoud/tourism-germany.git"  target="_blank">
+              <Button colored>GitHub</Button>
+             </a>
+
+             <a href="projects/html-css/index.html"  target="_blank">
+             <Button colored>Demo</Button>
+             </a>
+
+            </CardActions>
+            <CardMenu style={{color: '#fff'}}>
+              <IconButton name="share" />
+            </CardMenu>
+          </Card>
+
+
+          {/* Project 2 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #1</CardTitle>
             <CardText>
@@ -27,7 +50,13 @@ class Projects extends Component {
             </CardMenu>
           </Card>
 
+         
+
+         
+
         </div>
+
+        
 
 
       )
@@ -45,7 +74,8 @@ class Projects extends Component {
     return(
       <div>
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-          <Tab>React</Tab>
+        <Tab>My Projects</Tab>
+
          
         </Tabs>
 
